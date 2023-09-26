@@ -1,0 +1,102 @@
+---
+
+---
+<section id="grid">
+    <h2>Esto es un grid y lo demás es tontería</h2>
+    <div id="grid__container">
+        <div id="grid__item">
+            <h3>Característica</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates sed in saepe deserunt accusamus? Porro facere
+                dignissimos tempore molestias? Minima natus repudiandae
+                repellendus pariatur mollitia dolorem nesciunt facere
+                reprehenderit distinctio!
+            </p>
+        </div>
+        <div id="grid__item">
+            <h3>Característica</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates sed in saepe deserunt accusamus? Porro facere
+                dignissimos tempore molestias? Minima natus repudiandae
+                repellendus pariatur mollitia dolorem nesciunt facere
+                reprehenderit distinctio!
+            </p>
+        </div>
+        <div id="grid__item">
+            <h3>Característica</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates sed in saepe deserunt accusamus? Porro facere
+                dignissimos tempore molestias? Minima natus repudiandae
+                repellendus pariatur mollitia dolorem nesciunt facere
+                reprehenderit distinctio!
+            </p>
+        </div>
+        <div id="grid__item">
+            <h3>Característica</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates sed in saepe deserunt accusamus? Porro facere
+                dignissimos tempore molestias? Minima natus repudiandae
+                repellendus pariatur mollitia dolorem nesciunt facere
+                reprehenderit distinctio!
+            </p>
+        </div>
+        <div id="grid__item">
+            <h3>Característica</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates sed in saepe deserunt accusamus? Porro facere
+                dignissimos tempore molestias? Minima natus repudiandae
+                repellendus pariatur mollitia dolorem nesciunt facere
+                reprehenderit distinctio!
+            </p>
+        </div>
+        <div id="grid__item">
+            <h3>Característica</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates sed in saepe deserunt accusamus? Porro facere
+                dignissimos tempore molestias? Minima natus repudiandae
+                repellendus pariatur mollitia dolorem nesciunt facere
+                reprehenderit distinctio!
+            </p>
+        </div>
+    </div>
+</section>
+<style>
+    main {
+        padding: 2.5rem;
+
+        & h2 {
+            text-align: center;
+        }
+    }
+
+    #grid__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3em;
+    }
+
+    #grid__item {
+        box-shadow: 1px 1px 2em #0003;
+        padding: 1em;
+        transition: .2s ease-in-out;
+        user-select: none;
+        border-radius: .75em;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 1px 1px 2em #ff88;
+        }
+    }
+
+    @media (width < 720px) {
+        #grid__container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+</style>

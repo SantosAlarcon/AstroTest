@@ -1,0 +1,116 @@
+---
+
+---
+
+<section id="contact" name="contact">
+    <h2>Contacto</h2>
+    <div id="contact__container">
+        <div id="contact__form">
+            <form>
+                <label for="name"
+                    >Nombre
+                    <input
+                        name="name"
+                        type="text"
+                        placeholder="Nombre"
+                        required
+                    />
+                </label>
+                <label for="email"
+                    >E-mail
+                    <input
+                        name="email"
+                        type="email"
+                        placeholder="E-mail"
+                        required
+                    />
+                </label>
+                <label for="message"
+                    >Mensaje
+                    <textarea name="message" placeholder="Mensaje" required
+                    ></textarea>
+                </label>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </div>
+        <div id="contact__image">
+            <img src="/contact-neko.webp" />
+        </div>
+    </div>
+</section>
+
+<style>
+    #contact {
+        padding: 2.5em;
+
+        & h2 {
+            text-align: center;
+            padding: 1em 0;
+        }
+    }
+
+    #contact__container {
+        display: flex;
+        justify-content: center;
+        gap: 3em;
+    }
+
+    label {
+        display: contents;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    input,
+    textarea {
+        background: #0003;
+        color: inherit;
+        font-size: inherit;
+        border-radius: 1em;
+        border: 0;
+        outline: 0;
+        font-family: inherit;
+        width: 450px;
+        padding: 1em;
+    }
+
+    textarea {
+        resize: none;
+        height: 300px;
+    }
+
+    #contact__image {
+        & img {
+            height: 750px;
+        }
+    }
+
+    button {
+        background: #228;
+        padding: 1em 2em;
+        color: inherit;
+        font-size: inherit;
+        width: 50%;
+    }
+
+    @media (width < 720px) {
+        #contact__container {
+            flex-direction: column-reverse;
+        }
+
+        #contact__image {
+            & img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        button {
+            margin: 0 auto;
+        }
+    }
+</style>

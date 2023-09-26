@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --dark-bg: #223;
+    --dark-text-color: #eee;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Jost";
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 1.1em;
+    line-height: 1.75em;
+}
+
+a, a:visited, a:active, a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: .25em 0;
+    margin: 0;
+    line-height: 1.5em;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2.25em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.75em;
+}
+
+h5 {
+    font-size: 1.5em;
+}
+
+h6 {
+    font-size: 1.25em;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    font-family: inherit;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+section {
+    border-top: 1px #666 solid;
+    padding: 2em;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--dark-bg);
+        color: var(--dark-text-color);
+    }
+}
