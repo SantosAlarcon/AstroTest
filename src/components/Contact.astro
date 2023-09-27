@@ -44,7 +44,7 @@
 
 <style>
     #contact {
-        padding: 2.5em;
+        padding: 4em;
 
         & h2 {
             text-align: center;
@@ -56,6 +56,10 @@
         display: flex;
         justify-content: center;
         gap: 3em;
+    }
+
+    #contact__form {
+        width: 40%;
     }
 
     label {
@@ -103,6 +107,10 @@
     @media (width < 720px) {
         #contact__container {
             flex-direction: column-reverse;
+        }
+
+        #contact__form {
+            width: 100%;
         }
 
         #contact__image {
