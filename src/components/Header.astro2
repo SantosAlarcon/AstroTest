@@ -1,12 +1,15 @@
 ---
-
 ---
-
 <header>
     <nav>
         <div id="logo">LOGO</div>
         <div id="mobile__navmenu">
             <span></span>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#about">Acerca de mí</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
         </div>
         <div id="nav__links">
             <ul>
@@ -86,75 +89,63 @@
                 opacity: 0;
             }
         }
+
+        & ul {
+            display: block;
+            opacity: 0;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            background-color: #223b;
+            backdrop-filter: blur(5px);
+            left: 0;
+            top: 87px;
+            width: 100%;
+            height: 100dvh;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        & li {
+            padding: 1em 1.5em;
+            transform: translateX(-10em);
+            transition: transform 0.2s ease-in-out;
+            font-size: 1.25em;
+        }
     }
 
     @media (width < 720px) {
         #nav__links {
-            position: absolute;
-            width: 100%;
-            left: 0;
-            top: 1px;
-
-            & ul {
-                display: block;
-                opacity: 0;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                position: absolute;
-                background-color: #223b;
-                backdrop-filter: blur(5px);
-                left: 0;
-                top: 100px;
-                width: 100%;
-                height: 100dvh;
-                transition: all 0.2s ease-in-out;
-                transform: translateX(-35em);
-            }
-
-            & li {
-                padding: 1em 1.5em;
-                transition: transform 0.2s ease-in-out;
-                font-size: 1.25em;
-            }
-
-            & ul.activo {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            display: none;
         }
 
         #mobile__navmenu {
             display: flex;
             cursor: pointer;
             width: 40px;
+
+            &.activo {
+                & ul {
+                    opacity: 1;
+                }
+
+                & li {
+                    transform: translateX(0);
+                }
+            }
         }
     }
 </style>
 <script>
     const mobileBtn = document.querySelector("#mobile__navmenu");
-    const mobileSpan = document.querySelector("#mobile__navmenu span");
-    const navLinksUl = document.querySelector("#nav__links ul");
-    const navLinks = document.querySelectorAll("#nav__links a");
+    const mobileBtnSpan = document.querySelector("#mobile__navmenu span");
     const body = document.body;
 
     mobileBtn.addEventListener("click", () => {
         mobileBtn.classList.toggle("activo");
-        mobileSpan.classList.toggle("activo");
-        navLinksUl.classList.toggle("activo");
+        mobileBtnSpan.classList.toggle("activo");
         mobileBtn.classList.contains("activo")
             ? (body.style.overflowY = "hidden")
             : (body.style.overflowY = "");
     });
-
-    navLinks.forEach(enlace => {
-        enlace.addEventListener("click", () => {
-            mobileBtn.classList.remove("activo");
-            mobileSpan.classList.remove("activo");
-            navLinksUl.classList.remove("activo");
-            mobileBtn.classList.contains("activo")
-            ? (body.style.overflowY = "hidden")
-            : (body.style.overflowY = "");
-        })
-    })
 </script>

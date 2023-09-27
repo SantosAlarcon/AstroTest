@@ -53,6 +53,10 @@ h6 {
     font-size: 1.25em;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 button {
     border: 0;
     outline: 0;
