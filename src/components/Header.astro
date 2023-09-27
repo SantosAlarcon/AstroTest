@@ -23,7 +23,7 @@
         padding: 2em;
         position: fixed;
         width: 100%;
-        background-color: #223b;
+        background-color: #2236;
         backdrop-filter: blur(5px);
         box-shadow: 2px 0 2em #0006;
         z-index: 5;
@@ -53,7 +53,7 @@
         & span::before,
         & span::after {
             content: "";
-            background-color: #eee;
+            background-color: #111;
             height: 5px;
             border-radius: 1em;
             width: 45px;
@@ -102,7 +102,7 @@
                 margin: 0;
                 padding: 0;
                 position: absolute;
-                background-color: #223b;
+                background-color: #fffb;
                 backdrop-filter: blur(5px);
                 left: 0;
                 top: 100px;
@@ -130,6 +130,27 @@
             width: 40px;
         }
     }
+
+    @media (prefers-color-scheme: dark) {
+        header {
+            background-color: #223c;
+        }
+
+        #nav__links {
+            & ul {
+                background-color: #223e;
+            }
+        }
+
+        #mobile__navmenu {
+            & span,
+            & span::before,
+            & span::after {
+                background-color: #eee;
+        }
+
+    }
+
 </style>
 <script>
     const mobileBtn = document.querySelector("#mobile__navmenu");
